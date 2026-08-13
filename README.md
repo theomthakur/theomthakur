@@ -286,18 +286,11 @@ delivery never becomes a second charge.
 
 ---
 
-## GitHub
+## Languages I actually write
 
 <p align="center">
-  <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=theomthakur&theme=default" alt="Profile summary"/>
-</p>
-<p align="center">
-  <img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=theomthakur&theme=default" alt="Top languages by repo"/>
-  <img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=theomthakur&theme=default" alt="Top languages by commit"/>
-</p>
-<p align="center">
-  <img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=theomthakur&theme=default" alt="Stats"/>
-  <img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=theomthakur&theme=default&utcOffset=-4" alt="Productive time"/>
+  <img width="46%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=theomthakur&theme=transparent" alt="Languages by repository"/>
+  <img width="46%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=theomthakur&theme=transparent" alt="Languages by commit"/>
 </p>
 
 ---
