@@ -1,7 +1,7 @@
 <h1 align="center">Om Thakur</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=3400&pause=1000&color=8A1C1C&center=true&vCenter=true&width=700&lines=Software+engineer+%E2%80%94+applied+AI+and+full+stack;MS+Computer+Engineering%2C+NYU+2026;Previously+building+clinical+AI+at+NYU+Langone+Health" alt="Om Thakur" />
+  <b>Software engineer — applied AI and full stack</b>
 </p>
 
 <p align="center">
