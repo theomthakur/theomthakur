@@ -106,7 +106,7 @@ npm install --save-dev agentcassette
 
 ---
 
-## Applied AI and product systems
+## Applied AI
 
 <table>
 <tr>
@@ -145,47 +145,49 @@ Policy hashes anchored on-chain; real payment rails in sandbox. Built in a hacka
 <tr>
 <td width="50%" valign="top">
 
-### ElectroKare Abstain
-An evaluation and abstention layer for ECG-to-biomarker models. It exposes how an acceptable
-overall error can hide dangerous-band misses, then measures the trade-off between coverage and
-**answered-case sensitivity** without counting abstained cases as successful detections.
+### Answerlight
+Drafts a defendant's Answer to a civil complaint and ties **every** reply back to the exact
+paragraph it answers. The tie is verified outside the model in plain code, not trusted from it,
+because in legal work an unsupported citation is the failure that ends careers.
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Clinical AI](https://img.shields.io/badge/Clinical_AI-007C91?style=flat-square)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 
-<a href="https://electrokare.vercel.app"><img src="https://img.shields.io/badge/Live_demo-2EA44F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
-<a href="https://github.com/theomthakur/electrokare"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+<a href="https://answer-light.vercel.app"><img src="https://img.shields.io/badge/Live_demo-2EA44F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+<a href="https://github.com/theomthakur/answer-light"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
 </td>
 <td width="50%" valign="top">
 
-### Greenlight
-A control layer between generated creative and publication. Deterministic checks measure palette,
-contrast, safe area, logo size, and claims; a model may plan repairs, but **never decides whether
-an asset passes** and cannot introduce a colour outside the approved brand book.
+### Chartproof
+Paste a messy clinical visit note, get a structured SOAP note plus ICD-10 and CPT codes. Every
+code's justification is checked in plain code against the clinician's own words, and identifiers
+are stripped before the model sees anything. Nothing is final until a human approves it.
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
-<a href="https://github.com/theomthakur/melius"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+<a href="https://kinstead-clinician-copilot.vercel.app"><img src="https://img.shields.io/badge/Live_demo-2EA44F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+<a href="https://github.com/theomthakur/kinstead-clinician-copilot"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### MTS Rundown
-Turns a ranked live-news feed into a timed running order. A deterministic planner filters stale
-items, packs the clock, separates repetitive stories, and flags weakly sourced claims. Every cut,
-swap, and hold keeps its reason so a producer can **argue with the schedule**.
+### DealForge
+Multi-agent negotiation. A buyer agent bargains **in parallel** against ten seller agents with
+distinct strategies, streamed live over SSE, with per-agent evaluation and a hard turn limit so
+negotiations actually terminate. State-machine orchestration on asyncio.
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
-<a href="https://mts-rundown.vercel.app"><img src="https://img.shields.io/badge/Live_demo-2EA44F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
-<a href="https://github.com/theomthakur/mts"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+<a href="https://github.com/theomthakur/negotiation_ai"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
 </td>
 <td width="50%" valign="top">
