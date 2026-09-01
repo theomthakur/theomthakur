@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/badge/NYU-MS_Computer_Engineering_2026-57068C?style=flat-square&logo=academia&logoColor=white" alt="NYU"/>
   <img src="https://img.shields.io/badge/New_York_City-1A1815?style=flat-square&logo=googlemaps&logoColor=white" alt="NYC"/>
   <img src="https://img.shields.io/badge/Open_to-Full--time_roles_across_the_US-2EA44F?style=flat-square" alt="Open to work"/>
+  <img src="https://img.shields.io/badge/Published-PyPI_%26_npm-3775A9?style=flat-square&logo=pypi&logoColor=white" alt="Published packages"/>
 </p>
 
 ---
@@ -31,8 +32,77 @@ the thousandth query.** Almost everything below has a deterministic verification
 under the AI, because in the domains I care about a confident wrong answer costs more than an
 obvious one.
 
+That belief is now packaged: **[benchtrace](https://pypi.org/project/benchtrace/)** on PyPI
+measures whether a model is actually better, and
+**[agentcassette](https://www.npmjs.com/package/agentcassette)** on npm makes agent runs
+replayable in CI so a test suite stops paying an API bill to tell you the same thing twice.
+
 > Links open in the same tab — GitHub strips `target="_blank"` from READMEs. **Cmd-click** (or
 > middle-click) to open a demo in a new tab.
+
+---
+
+## Published packages
+
+Installable, versioned, and open to anyone who wants to check the work.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### benchtrace
+Trace-first evaluation for LLM agents. One runtime-validated JSONL schema is written by the
+runner and read by everything else: grading, statistics, cost analysis, retrieval evaluation,
+model comparison and HTML reporting.
+
+Pass-rate intervals use **Wilson**, with exact **Clopper-Pearson** available. A percentile
+bootstrap is deliberately not used, because for Bernoulli data it collapses to a point whenever
+every case passes: `5/5` would report a 95% interval of 100% to 100%. Two models are compared
+with an **exact McNemar test** on paired cases, and it declines to name a winner when the
+interval includes zero.
+
+```bash
+pip install benchtrace
+```
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyPI](https://img.shields.io/pypi/v/benchtrace?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-74_passing-2EA44F?style=flat-square)
+![mypy](https://img.shields.io/badge/mypy-strict-2EA44F?style=flat-square)
+
+<a href="https://pypi.org/project/benchtrace/"><img src="https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge&logo=pypi&logoColor=white" alt="PyPI"/></a>
+<a href="https://github.com/theomthakur/benchtrace"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+
+</td>
+<td width="50%" valign="top">
+
+### agentcassette
+Record an LLM agent run once, replay it in CI with **zero API calls** and no non-determinism.
+
+Recording happens at the semantic layer rather than over HTTP: messages, tool calls with their
+arguments, tool results and final output, normalized across OpenAI, Anthropic, Google and
+OpenAI-compatible shapes. A cassette therefore survives an SDK upgrade or a provider swap, which
+is exactly where HTTP-level recorders break. When a replay genuinely cannot match, the error
+names the diverging turn, both fingerprints and a **path-level diff**, so the fix is visible
+without opening the cassette.
+
+**Zero runtime dependencies.**
+
+```bash
+npm install --save-dev agentcassette
+```
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![npm](https://img.shields.io/npm/v/agentcassette?style=flat-square)
+![Dependencies](https://img.shields.io/badge/dependencies-0-2EA44F?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-21_passing-2EA44F?style=flat-square)
+
+<a href="https://www.npmjs.com/package/agentcassette"><img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/></a>
+<a href="https://github.com/theomthakur/agentcassette"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+
+</td>
+</tr>
+</table>
 
 ---
 
