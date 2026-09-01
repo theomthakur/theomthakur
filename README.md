@@ -67,7 +67,7 @@ pip install benchtrace
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyPI](https://img.shields.io/pypi/v/benchtrace?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-74_passing-2EA44F?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-77_passing-2EA44F?style=flat-square)
 ![mypy](https://img.shields.io/badge/mypy-strict-2EA44F?style=flat-square)
 
 <a href="https://pypi.org/project/benchtrace/"><img src="https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge&logo=pypi&logoColor=white" alt="PyPI"/></a>
@@ -95,7 +95,7 @@ npm install --save-dev agentcassette
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![npm](https://img.shields.io/npm/v/agentcassette?style=flat-square)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-2EA44F?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-21_passing-2EA44F?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-23_passing-2EA44F?style=flat-square)
 
 <a href="https://www.npmjs.com/package/agentcassette"><img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/></a>
 <a href="https://github.com/theomthakur/agentcassette"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
@@ -192,16 +192,15 @@ negotiations actually terminate. State-machine orchestration on asyncio.
 </td>
 <td width="50%" valign="top">
 
-### Relevance Lens
-Natural-language people search with a **deterministic** relevance score, a grounded
-per-criterion match breakdown showing exactly which evidence matched, and a ranking-accuracy
-metric measured against a labelled answer set. The AI parses; the scoring stays auditable.
+### Understudy
+An LLM discovers a banking workflow once and compiles the successful run into a reviewed,
+typed capability. Replay is deterministic with **zero model calls**; policy checks guard both
+discovery and replay, and irreversible actions transfer control to a human through a lease.
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 
-<a href="https://relevance-lens.vercel.app"><img src="https://img.shields.io/badge/Live_demo-2EA44F?style=for-the-badge&logo=vercel&logoColor=white" alt="Demo"/></a>
+<a href="https://github.com/theomthakur/understudy"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
 </td>
 </tr>
@@ -215,15 +214,15 @@ metric measured against a labelled answer set. The AI parses; the scoring stays 
 <tr>
 <td width="50%" valign="top">
 
-### Raft-KV
-A linearizable key-value store implementing **Raft** from the paper: leader election, log
-replication, snapshots. Safety and liveness properties are **machine-checked in TLA+**, so the
-protocol is verified rather than just tested.
+### raftlab
+A pure Raft state machine with a deterministic fault simulator. A failing `u64` seed reproduces
+the same partitions, crashes, persistence acknowledgements, messages, and bytes on every run;
+all five Raft safety properties are checked **after every simulated step**.
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
-![TLA+](https://img.shields.io/badge/TLA%2B-4B0082?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-94_passing-2EA44F?style=flat-square)
 
-<a href="https://github.com/theomthakur/Raft-KV-Raft-TLA-Verified"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+<a href="https://github.com/theomthakur/raftlab"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
 </td>
 <td width="50%" valign="top">
@@ -290,17 +289,16 @@ race. Testcontainers integration tests prove exactly one winner under concurrent
 </td>
 <td width="50%" valign="top">
 
-### Eventify
-Event ticketing with **concurrency-safe seat reservation** under optimistic locking, QR
-check-in, role-based JWT auth, and Stripe payments with webhook idempotency so a duplicate
-delivery never becomes a second charge.
+### parqet
+A columnar SQL engine over Parquet, written from scratch in Rust. It has its own typed planner,
+switchable optimizer rules, vectorized Arrow operators, row-group/page pruning, and disk spilling.
+Correctness is checked by running the same generated queries against **DuckDB as an oracle**.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Apache Arrow](https://img.shields.io/badge/Apache_Arrow-1293D8?style=flat-square&logo=apache&logoColor=white)
+![Parquet](https://img.shields.io/badge/Parquet-50ABF1?style=flat-square)
 
-<a href="https://github.com/theomthakur/Eventify-Book-and-Plan-Events-Platform"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
+<a href="https://github.com/theomthakur/parqet"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
 </td>
 </tr>
