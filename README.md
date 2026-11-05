@@ -1,7 +1,7 @@
 <h1 align="center">Om Thakur</h1>
 
 <p align="center">
-  <b>Software engineer — applied AI and full stack</b>
+  <b>Software engineer | applied AI and full stack</b>
 </p>
 
 <p align="center">
@@ -22,23 +22,79 @@
 
 ## About
 
-A year at **NYU Langone Health** building clinical AI in production: a retrieval system real
-physicians used, and the evaluation framework that measured whether it was actually right.
-Before that, two years at an **eight-engineer startup**, owning features end to end and shipping
-to **20,000+ users**.
+I'm a software engineer based in **New York**, with an MS in Computer Engineering from
+**NYU**. I build applied AI tools and full-stack applications, from understanding the user’s
+problem to building, testing and explaining the finished workflow.
 
-The thread through all of it: **anyone can demo a model, the work is proving it still holds on
-the thousandth query.** Almost everything below has a deterministic verification layer sitting
-under the AI, because in the domains I care about a confident wrong answer costs more than an
-obvious one.
+At **NYU Langone Health**, I contributed AWS Bedrock and evaluation integrations to a
+collaborative research-literature RAG project. Before that, I spent two years at **4iBiz**,
+owning customer-facing features end to end for SaaS products used by **20,000+ users**.
 
-That belief is now packaged: **[benchtrace](https://pypi.org/project/benchtrace/)** on PyPI
-measures whether a model is actually better, and
-**[agentcassette](https://www.npmjs.com/package/agentcassette)** on npm makes agent runs
-replayable in CI so a test suite stops paying an API bill to tell you the same thing twice.
+My recent projects focus on useful agent workflows: processing invoices, answering questions
+with sources, coordinating work in Slack and purchasing within explicit spending rules.
+I also publish tools for evaluating models and replaying agent runs in tests.
 
-> Links open in the same tab — GitHub strips `target="_blank"` from READMEs. **Cmd-click** (or
-> middle-click) to open a demo in a new tab.
+---
+
+## Recent projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Invoice Desk
+An invoice-processing workspace with separate reader, validator, approver and critic agents.
+It checks invoices against mock inventory, routes problems to human review and records
+**simulated payments** only after code checks the payment rules. Includes department handoffs,
+analytics and readable reports.
+
+**Python · FastAPI · LangGraph · React · TypeScript · SQLite**
+
+[Source and local demo instructions](https://github.com/theomthakur/invoice-desk)
+
+</td>
+<td width="50%" valign="top">
+
+### PolicyPilot
+Ask questions about a PDF library and open the original page behind an answer.
+The agent can search again, read more evidence or ask for clarification. Includes document
+uploads, citation checks and an optional Keycloak sign-in stack with per-user access.
+
+**Python · FastAPI · React · PostgreSQL · pgvector · Redis · Docker**
+
+[Source and setup](https://github.com/theomthakur/policypilot) ·
+[Demo video](https://youtu.be/njw7qmk8aTQ)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### AfterOrder
+A purchasing workflow that receives a signed Shopify order, compares supplier offers and
+recovers when the first supplier runs out of stock. Merchant rules limit what agents can
+buy, and signed dispatch evidence controls **testnet payment** release.
+
+**TypeScript · React · Node.js · Shopify · Solidity · Monad testnet**
+
+[Source and integration evidence](https://github.com/theomthakur/afterorder)
+
+</td>
+<td width="50%" valign="top">
+
+### SafeSlackForce
+A team-built incident-coordination prototype inside Slack. A Commander delegates to four
+specialists to organize tasks, review evidence, notify people and prepare handoff reports.
+A dashboard shows agent activity and unresolved work. Demonstrated with synthetic incidents.
+
+**TypeScript · Slack Bolt · React · Node.js · SQLite · OpenRouter**
+
+[Demo video](https://youtu.be/xYKxVzRwwRE) ·
+[Source and setup](https://github.com/theomthakur/safeslackforce)
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -51,15 +107,9 @@ Installable, versioned, and open to anyone who wants to check the work.
 <td width="50%" valign="top">
 
 ### benchtrace
-Trace-first evaluation for LLM agents. One runtime-validated JSONL schema is written by the
-runner and read by everything else: grading, statistics, cost analysis, retrieval evaluation,
-model comparison and HTML reporting.
-
-Pass-rate intervals use **Wilson**, with exact **Clopper-Pearson** available. A percentile
-bootstrap is deliberately not used, because for Bernoulli data it collapses to a point whenever
-every case passes: `5/5` would report a 95% interval of 100% to 100%. Two models are compared
-with an **exact McNemar test** on paired cases, and it declines to name a winner when the
-interval includes zero.
+Evaluate LLM agents from saved run traces. Compare answer quality, retrieval, latency and
+cost, then generate an HTML report. Statistical checks help distinguish an improvement from
+variation between runs.
 
 ```bash
 pip install benchtrace
@@ -67,7 +117,6 @@ pip install benchtrace
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyPI](https://img.shields.io/pypi/v/benchtrace?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-77_passing-2EA44F?style=flat-square)
 ![mypy](https://img.shields.io/badge/mypy-strict-2EA44F?style=flat-square)
 
 <a href="https://pypi.org/project/benchtrace/"><img src="https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge&logo=pypi&logoColor=white" alt="PyPI"/></a>
@@ -77,16 +126,9 @@ pip install benchtrace
 <td width="50%" valign="top">
 
 ### agentcassette
-Record an LLM agent run once, replay it in CI with **zero API calls** and no non-determinism.
-
-Recording happens at the semantic layer rather than over HTTP: messages, tool calls with their
-arguments, tool results and final output, normalized across OpenAI, Anthropic, Google and
-OpenAI-compatible shapes. A cassette therefore survives an SDK upgrade or a provider swap, which
-is exactly where HTTP-level recorders break. When a replay genuinely cannot match, the error
-names the diverging turn, both fingerprints and a **path-level diff**, so the fix is visible
-without opening the cassette.
-
-**Zero runtime dependencies.**
+Record an agent run and replay its model interactions in tests without new API calls.
+It stores messages, tool calls and results, and reports where a replay differs from the
+recording. Supports multiple provider formats with zero runtime dependencies.
 
 ```bash
 npm install --save-dev agentcassette
@@ -95,7 +137,6 @@ npm install --save-dev agentcassette
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![npm](https://img.shields.io/npm/v/agentcassette?style=flat-square)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-2EA44F?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-23_passing-2EA44F?style=flat-square)
 
 <a href="https://www.npmjs.com/package/agentcassette"><img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/></a>
 <a href="https://github.com/theomthakur/agentcassette"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
@@ -115,8 +156,7 @@ npm install --save-dev agentcassette
 ### EDGAR Lens
 An agentic system over SEC 10-K filings that **grades its own work**. It drafts citation-backed
 claims, scores its own citation precision with Jaccard token overlap, and escalates the
-retrieval strategy from focused to broad until it clears a quality bar. **100% citation
-grounding across 19 filings, median one round to converge, zero silent failures.**
+retrieval strategy from focused to broad until it clears a quality bar. Recorded evaluation results and their limits are documented in the repository.
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
@@ -131,7 +171,7 @@ grounding across 19 filings, median one round to converge, zero silent failures.
 ### Mandate
 Agentic commerce with a governance layer. An agent has to produce a **checkable reason** and
 clear policy before it can spend anything, and the decision is written to a log either way.
-Policy hashes anchored on-chain; real payment rails in sandbox. Built in a hackathon this month.
+Policy hashes anchored on-chain; real payment rails in sandbox. Built at a hackathon.
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -148,7 +188,7 @@ Policy hashes anchored on-chain; real payment rails in sandbox. Built in a hacka
 ### Answerlight
 Drafts a defendant's Answer to a civil complaint and ties **every** reply back to the exact
 paragraph it answers. The tie is verified outside the model in plain code, not trusted from it,
-because in legal work an unsupported citation is the failure that ends careers.
+so a reviewer can check the draft against the source complaint.
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -181,7 +221,7 @@ are stripped before the model sees anything. Nothing is final until a human appr
 ### DealForge
 Multi-agent negotiation. A buyer agent bargains **in parallel** against ten seller agents with
 distinct strategies, streamed live over SSE, with per-agent evaluation and a hard turn limit so
-negotiations actually terminate. State-machine orchestration on asyncio.
+negotiations actually terminate.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -220,7 +260,6 @@ the same partitions, crashes, persistence acknowledgements, messages, and bytes 
 all five Raft safety properties are checked **after every simulated step**.
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-94_passing-2EA44F?style=flat-square)
 
 <a href="https://github.com/theomthakur/raftlab"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code"/></a>
 
