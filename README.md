@@ -48,9 +48,14 @@ It checks invoices against mock inventory, routes problems to human review and r
 **simulated payments** only after code checks the payment rules. Includes department handoffs,
 analytics and readable reports.
 
-**Python · FastAPI · LangGraph · React · TypeScript · SQLite**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-[Source and local demo instructions](https://github.com/theomthakur/invoice-desk)
+<a href="https://github.com/theomthakur/invoice-desk"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Invoice Desk source code and local demo instructions"/></a>
 
 </td>
 <td width="50%" valign="top">
@@ -60,10 +65,16 @@ Ask questions about a PDF library and open the original page behind an answer.
 The agent can search again, read more evidence or ask for clarification. Includes document
 uploads, citation checks and an optional Keycloak sign-in stack with per-user access.
 
-**Python · FastAPI · React · PostgreSQL · pgvector · Redis · Docker**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat-square)
+![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-[Source and setup](https://github.com/theomthakur/policypilot) ·
-[Demo video](https://youtu.be/njw7qmk8aTQ)
+<a href="https://youtu.be/njw7qmk8aTQ"><img src="https://img.shields.io/badge/Demo_video-2EA44F?style=for-the-badge&logo=youtube&logoColor=white" alt="PolicyPilot demo video"/></a>
+<a href="https://github.com/theomthakur/policypilot"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="PolicyPilot source code and setup"/></a>
 
 </td>
 </tr>
@@ -75,9 +86,14 @@ A purchasing workflow that receives a signed Shopify order, compares supplier of
 recovers when the first supplier runs out of stock. Merchant rules limit what agents can
 buy, and signed dispatch evidence controls **testnet payment** release.
 
-**TypeScript · React · Node.js · Shopify · Solidity · Monad testnet**
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
+![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white)
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white)
+![Monad testnet](https://img.shields.io/badge/Monad_testnet-836EF9?style=flat-square)
 
-[Source and integration evidence](https://github.com/theomthakur/afterorder)
+<a href="https://github.com/theomthakur/afterorder"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="AfterOrder source code and integration evidence"/></a>
 
 </td>
 <td width="50%" valign="top">
@@ -87,10 +103,15 @@ A team-built incident-coordination prototype inside Slack. A Commander delegates
 specialists to organize tasks, review evidence, notify people and prepare handoff reports.
 A dashboard shows agent activity and unresolved work. Demonstrated with synthetic incidents.
 
-**TypeScript · Slack Bolt · React · Node.js · SQLite · OpenRouter**
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Slack Bolt](https://img.shields.io/badge/Slack_Bolt-4A154B?style=flat-square&logo=slack&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![OpenRouter](https://img.shields.io/badge/OpenRouter-333333?style=flat-square)
 
-[Demo video](https://youtu.be/xYKxVzRwwRE) ·
-[Source and setup](https://github.com/theomthakur/safeslackforce)
+<a href="https://youtu.be/xYKxVzRwwRE"><img src="https://img.shields.io/badge/Demo_video-2EA44F?style=for-the-badge&logo=youtube&logoColor=white" alt="SafeSlackForce demo video"/></a>
+<a href="https://github.com/theomthakur/safeslackforce"><img src="https://img.shields.io/badge/Source_code-181717?style=for-the-badge&logo=github&logoColor=white" alt="SafeSlackForce source code and setup"/></a>
 
 </td>
 </tr>
